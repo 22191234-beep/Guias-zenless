@@ -1,0 +1,234 @@
+/* --- Variables de Color ZZZ --- */
+:root {
+    --bg-void: #0a0a0c;
+    --bg-panel: #1a1a1e;
+    --text-main: #f0f0f0;
+    --text-muted: #888890;
+    --zzz-yellow: #f4d259;
+    --zzz-cyan: #00e5ff;
+    --border-radius: 6px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Evita que la barra sticky tape los títulos al saltar */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Impact, Tahoma, Geneva, sans-serif;
+}
+
+body {
+    background-color: var(--bg-void);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Navegación Principal --- */
+.interknot-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background-color: #000;
+    border-bottom: 3px solid var(--zzz-yellow);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--zzz-yellow);
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.main-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.main-links a:hover {
+    color: var(--zzz-cyan);
+}
+
+/* --- Barra Secundaria de Facciones (Sticky) --- */
+.faction-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(15, 15, 19, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #2a2a30;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.faction-bar a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid #2a2a30;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.faction-bar a:hover {
+    color: #000;
+    background-color: var(--zzz-yellow);
+    border-color: var(--zzz-yellow);
+}
+
+/* --- Contenedor Principal --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+    background: linear-gradient(135deg, #1c1c21 0%, #0d0d12 100%);
+    padding: 3.5rem 3rem;
+    border-radius: var(--border-radius);
+    border-left: 6px solid var(--zzz-cyan);
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 200px;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px);
+}
+
+.hero-banner h2 {
+    font-size: 3rem;
+    color: var(--zzz-yellow);
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+/* --- Secciones y Catálogo --- */
+.database-section {
+    margin-bottom: 4.5rem;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: var(--zzz-cyan);
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.agent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+/* --- Tarjetas de Agente --- */
+.agent-card {
+    background-color: var(--bg-panel);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #2a2a30;
+}
+
+.agent-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 229, 255, 0.15);
+    border-color: var(--zzz-cyan);
+}
+
+.agent-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; /* Enfoca mejor el rostro del personaje */
+    display: block;
+}
+
+.agent-data {
+    padding: 1.3rem;
+}
+
+.agent-data h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+
+.faction {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* --- Etiquetas (Badges) de Combate --- */
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.agent-portrait {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: top; /* Enfoca mejor el rostro */
+}
+
+/* Atributos */
+.attr-ether    { background-color: #8c52ff; color: #fff; }
+.attr-ice      { background-color: #00e5ff; color: #000; }
+.attr-electric { background-color: #0051ff; color: #fff; }
+.attr-fire     { background-color: #ff4500; color: #fff; }
+.attr-physical { background-color: #f4d259; color: #000; }
+
+/* Especialidades */
+.spec-attack   { background-color: #e74c3c; color: #fff; }
+.spec-stun     { background-color: #ff9f1a; color: #000; }
+.spec-anomaly  { background-color: #9b59b6; color: #fff; }
+.spec-support  { background-color: #2ecc71; color: #000; }
+.spec-defense  { background-color: #3498db; color: #fff; }
+.spec-rupture  { background-color: #00cec9; color: #000; }
