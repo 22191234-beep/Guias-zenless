@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter-Knot | Base de Datos de Nueva Eridu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación Principal -->
+    <header class="interknot-nav">
+        <div class="logo">
+            <h1>INTER-KNOT <span>[PROXY.NET]</span></h1>
+        </div>
+        <nav class="main-links">
+            <a href="#" class="nav-btn active" onclick="cambiarVista('todos', event)">Todos</a>
+            <a href="#" class="nav-btn" onclick="cambiarVista('facciones', event)">Por Facción</a>
+            <a href="#" class="nav-btn" onclick="cambiarVista('atributos', event)">Por Atributo</a>
+        </nav>
+    </header>
+
+    <!-- Barra de Acceso Rápido a Facciones (Sticky) -->
+    <nav id="facciones-menu" class="faction-bar">
+        <a href="#liebres">Liebres Astutas</a>
+        <a href="#belobog">Belobog</a>
+        <a href="#victoria">Servicios Victoria</a>
+        <a href="#neps">Seguridad Pública</a>
+        <a href="#calidon">Hijos de Calidón</a>
+        <a href="#seccion6">Sección 6</a>
+        <a href="#obol">Escuadrón Obol</a>
+        <a href="#lyra">Estrellas de Lyra</a>
+        <a href="#ruisenor">Ruiseñor</a>
+        <a href="#yunkui">Cumbre Yunkui</a>
+        <a href="#spook">Spook Shack</a>
+        <a href="#krampus">Krampus</a>
+        <a href="#angeles">Ángeles del Delirio</a>
+        <a href="#faeton">Faeton</a>
+        <a href="#roscalifer">Roscalifer</a>
+        <a href="#alianza">Alianza de Dayat</a>
+    </nav>
+
+    <main id="inicio" class="container">
+        <!-- Banner Principal -->
+        <section class="hero-banner">
+            <h2>Base de Datos de Nueva Eridu</h2>
+            <p>Directorio completo de agentes clasificados por facción, atributo elemental y rol de combate.</p>
+        </section>
+
+        <!-- Contenedor dinámico para vistas filtradas (Por Facción / Por Atributo) -->
+        <div id="filtered-view" style="display: none;"></div>
+
+        <!-- AQUÍ SIGUEN TODAS TUS SECCIONES ACTUALES (Liebres Astutas, Belobog, etc.) -->
+
+        <!-- 1. LIEBRES ASTUTAS -->
+        <section id="liebres" class="database-section">
+            <h3 class="section-title">/ 01. Liebres Astutas (Gentle House)</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/nicole.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Nicole Demara</h4>
+                        <p class="faction">Líder de las Liebres Astutas</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/anbytr.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Anby Demara</h4>
+                        <p class="faction">Liebres Astutas</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/billy.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Billy Kid</h4>
+                        <p class="faction">Liebres Astutas</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/nekomata.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Gata rompepitys</h4>
+                        <p class="faction">Liebres Astutas</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/billy_starlight.gif');"></div>
+                    <div class="agent-data">
+                        <h4>Billy Kid Starlight</h4>
+                        <p class="faction">Liebres Astutas</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-rupture">Ruptura</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 2. CONSTRUCCIONES BELOBOG -->
+        <section id="belobog" class="database-section">
+            <h3 class="section-title">/ 02. Construcciones Belobog</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/koleda.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Koleda Belobog</h4>
+                        <p class="faction">Presidenta de Belobog</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/grace.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Grace Howard</h4>
+                        <p class="faction">Construcciones Belobog</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/anton.png');"></div>
+                    <div class="agent-data">
+                        <h4>Anton Ivanov</h4>
+                        <p class="faction">Construcciones Belobog</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/ben.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Ben Bigger</h4>
+                        <p class="faction">Construcciones Belobog</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-defense">Defensivo</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. SERVICIOS DOMÉSTICOS VICTORIA -->
+        <section id="victoria" class="database-section">
+            <h3 class="section-title">/ 03. Servicios Domésticos Victoria</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/lycaon.png');"></div>
+                    <div class="agent-data">
+                        <h4>Von Lycaon</h4>
+                        <p class="faction">Servicios Victoria</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/ellen.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Ellen Joe</h4>
+                        <p class="faction">Servicios Victoria</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/rina.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Alexandrina (Rina)</h4>
+                        <p class="faction">Servicios Victoria</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/corin.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Corin Wickes</h4>
+                        <p class="faction">Servicios Victoria</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. SEGURIDAD PÚBLICA (N.E.P.S.) -->
+        <section id="neps" class="database-section">
+            <h3 class="section-title">/ 04. Equipo de Crímenes Especiales (N.E.P.S.)</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/zhu_yuan.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Zhu Yuan</h4>
+                        <p class="faction">Seguridad Pública</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/qingyi.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Qingyi</h4>
+                        <p class="faction">Seguridad Pública</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/jane.png');"></div>
+                    <div class="agent-data">
+                        <h4>Jane Doe</h4>
+                        <p class="faction">Seguridad Pública</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/seth.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Seth Lowell</h4>
+                        <p class="faction">Seguridad Pública</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-defense">Defensivo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/Cissia.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Cissia</h4>
+                        <p class="faction">Seguridad Pública</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 5. HIJOS DE CALIDÓN -->
+        <section id="calidon" class="database-section">
+            <h3 class="section-title">/ 05. Hijos de Calidón</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/cesar.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Caesar King</h4>
+                        <p class="faction">Líder de Hijos de Calidón</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-defense">Defensivo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/burnice.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Burnice White</h4>
+                        <p class="faction">Hijos de Calidón</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/lighter.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Lighter</h4>
+                        <p class="faction">Hijos de Calidón</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/lucy.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Lucy</h4>
+                        <p class="faction">Hijos de Calidón</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/piper.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Piper Wheel</h4>
+                        <p class="faction">Hijos de Calidón</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/pulchra.jpeg');"></div>
+                    <div class="agent-data">
+                        <h4>Pulchra</h4>
+                        <p class="faction">Hijos de Calidón</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN 6 -->
+        <section id="seccion6" class="database-section">
+            <h3 class="section-title">/ 06. División de Operaciones Especiales: Sección 6</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/miyabi.gif');"></div>
+                    <div class="agent-data">
+                        <h4>Hoshimi Miyabi</h4>
+                        <p class="faction">Void Hunter: Discernimiento Abnegado</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Escarcha</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/yanagi.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Tsukishiro Yanagi</h4>
+                        <p class="faction">Sección 6</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/harumasa.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Asaba Harumasa</h4>
+                        <p class="faction">Sección 6</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/soukaku.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Soukaku</h4>
+                        <p class="faction">Sección 6</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 7. ESCUADRÓN OBOL -->
+        <section id="obol" class="database-section">
+            <h3 class="section-title">/ 07. Escuadrón Obol</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/soldier_11.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Soldado 11</h4>
+                        <p class="faction">Escuadrón Obol</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/trigger.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Trigger</h4>
+                        <p class="faction">Escuadrón Obol</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/anby_soldier.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>N.0 Anby</h4>
+                        <p class="faction">Escuadrón Obol</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/seed.gif');"></div>
+                    <div class="agent-data">
+                        <h4>Seed</h4>
+                        <p class="faction">Escuadrón Obol</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/orphie.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Orphie</h4>
+                        <p class="faction">Escuadrón Obol</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 8. ESTRELLAS DE LYRA -->
+        <section id="lyra" class="database-section">
+            <h3 class="section-title">/ 08. Estrellas de Lyra</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/astra3.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Astra Yao</h4>
+                        <p class="faction">Estrellas de Lyra</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/evelyn.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Evelyn Chevalier</h4>
+                        <p class="faction">Estrellas de Lyra</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 9. RUISEÑOR -->
+        <section id="ruisenor" class="database-section">
+            <h3 class="section-title">/ 09. Ruiseñor (Mockingbird)</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/vivian.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Vivian Banshee</h4>
+                        <p class="faction">Ruiseñor</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/hugo.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Hugo Vlad</h4>
+                        <p class="faction">Ruiseñor</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 10. CUMBRE YUNKUI -->
+        <section id="yunkui" class="database-section">
+            <h3 class="section-title">/ 10. Cumbre Yunkui (Yunkui Summit)</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/yixuan.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Yixuan</h4>
+                        <p class="faction">Gran Maestra de Cumbre Yunkui</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Tinta Áurica</span>
+                            <span class="badge spec-rupture">Ruptura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/ju_fufu.gif');"></div>
+                    <div class="agent-data">
+                        <h4>Ju Fufu</h4>
+                        <p class="faction">Cumbre Yunkui</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/pan.png');"></div>
+                    <div class="agent-data">
+                        <h4>Pan Yinhu</h4>
+                        <p class="faction">Cumbre Yunkui</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-defense">Defensivo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/ye_shunguang.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Ye Shunguang</h4>
+                        <p class="faction">Void Hunter: Árbitra Qingming</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Filo Afilado</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 11. SPOOK SHACK -->
+        <section id="spook" class="database-section">
+            <h3 class="section-title">/ 11. Spook Shack</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/yuzuha.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Ukinami Yuzuha</h4>
+                        <p class="faction">Spook Shack</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/alice.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Alice Thymefield</h4>
+                        <p class="faction">Spook Shack</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/manato.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Komano Manato</h4>
+                        <p class="faction">Spook Shack</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-rupture">Ruptura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/lucia.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Lucia Elowen</h4>
+                        <p class="faction">Spook Shack</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/yidhari.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Yidhari Murphy</h4>
+                        <p class="faction">Spook Shack</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-rupture">Ruptura</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 12. AUTORIDAD DE CUMPLIMIENTO KRAMPUS -->
+        <section id="krampus" class="database-section">
+            <h3 class="section-title">/ 12. Autoridad de Cumplimiento Krampus</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/dialyn.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Dialyn</h4>
+                        <p class="faction">Krampus</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/banyue.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Banyue</h4>
+                        <p class="faction">Krampus</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-rupture">Ruptura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/zhao.png');"></div>
+                    <div class="agent-data">
+                        <h4>Zhao</h4>
+                        <p class="faction">Krampus</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-defense">Defensivo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/promeia.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Promeia</h4>
+                        <p class="faction">Krampus</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/phoenix.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Phoenix</h4>
+                        <p class="faction">Krampus</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 13. ÁNGELES DEL DELIRIO -->
+        <section id="angeles" class="database-section">
+            <h3 class="section-title">/ 13. Ángeles del Delirio (Angels of Delusion)</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/sunna.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Sunna</h4>
+                        <p class="faction">Ángeles del Delirio</p>
+                        <div class="tags">
+                            <span class="badge attr-physical">Físico</span>
+                            <span class="badge spec-support">Auxiliar</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/aria2.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Aria</h4>
+                        <p class="faction">Ángeles del Delirio</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/nangong.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Nangong Yu</h4>
+                        <p class="faction">Ángeles del Delirio</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 14. Faeton -->
+        <section id="faeton" class="database-section">
+            <h3 class="section-title">/ 14. Faetón</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/pyrois.webp');"></div>
+                    <div class="agent-data">
+                        <h4>Pyrois</h4>
+                        <p class="faction">Faeton sama</p>
+                        <div class="tags">
+                            <span class="badge attr-ether">Etéreo</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 15. Roscalifer -->
+        <section id="roscalifer" class="database-section">
+            <h3 class="section-title">/ 15. Roscaelifer</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/velina.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Velina Airgid</h4>
+                        <p class="faction">Departamento de Planificacion Exterior de Roscalifer</p>
+                        <div class="tags">
+                            <span class="badge attr-wind">Aéreo</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/norma.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Norma Hollowell</h4>
+                        <p class="faction">Departamento de Planificacion Exterior de Roscalifer</p>
+                        <div class="tags">
+                            <span class="badge attr-fire">Ígneo</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/claret.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Claret Flint</h4>
+                        <p class="faction">Taller Flint de Roscaelifer</p>
+                        <div class="tags">
+                            <span class="badge attr-electric">Eléctrico</span>
+                            <span class="badge spec-armer">Armero</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/roxy.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Roxy Ifrita Pryce</h4>
+                        <p class="faction">Taller Flint de Roscaelifer</p>
+                        <div class="tags">
+                            <span class="badge attr-wind">Aéreo</span>
+                            <span class="badge spec-stun">Aturdidor</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/sigrid.jpeg');"></div>
+                    <div class="agent-data">
+                        <h4>Sigrid de L'Azur</h4>
+                        <p class="faction">Departamento de Patrulla Aérea de Roscaelifer</p>
+                        <div class="tags">
+                            <span class="badge attr-ice">Glacial</span>
+                            <span class="badge spec-attack">Atacante</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 16. Alianza de Dayat -->
+        <section id="alianza" class="database-section">
+            <h3 class="section-title">/ 16. Alianza de Dayat</h3>
+            <div class="agent-grid">
+                <article class="agent-card">
+                    <div class="agent-portrait" style="background-image: url('img/remielle.jpg');"></div>
+                    <div class="agent-data">
+                        <h4>Remielle Dan</h4>
+                        <p class="faction">Void Hunter: Lumiflujo Temporal</p>
+                        <div class="tags">
+                            <span class="badge attr-lumi">Lumiflujo</span>
+                            <span class="badge spec-anomaly">Anomalía</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- Modal de Expediente de Agente -->
+    <div id="agent-modal" class="modal-overlay" onclick="cerrarModal(event)">
+        <div class="modal-content" id="modal-box">
+            <button class="modal-close" onclick="cerrarModal(event, true)">&times;</button>
+        
+        <div class="modal-header">
+            <div id="modal-img" class="modal-portrait"></div>
+                <div class="modal-title-area">
+                    <span id="modal-faction" class="modal-faction">Facción</span>
+                    <h2 id="modal-name">Nombre del Agente</h2>
+                    <div id="modal-tags" class="tags"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="guide-block">
+                    <h4>// RESUMEN TÁCTICO</h4>
+                    <p id="modal-desc">Descripción del personaje...</p>
+                </div>
+
+                <div class="guide-block">
+                <div class="skills-header">
+                    <h4>// PRIORIDAD DE HABILIDADES</h4>
+                    <span id="modal-core" class="core-badge">Pasiva Central: F</span>
+                </div>
+                <div id="modal-skills" class="skills-priority"></div>
+            </div>
+            </div>
+
+                <div class="guide-grid">
+                    <div class="guide-block">
+                        <h4>// AMPLIFICADOR RECOMENDADO</h4>
+                        <p id="modal-wengine">Por definir</p>
+                    </div>
+                 <div class="guide-block">
+                     <h4>// PISTAS DE DISCO (SETS)</h4>
+                      <p id="modal-discs">Por definir</p>
+                    </div>
+                </div>
+
+                <div class="guide-block">
+                    <h4>// ROTACIÓN Y CONSEJOS</h4>
+                    <p id="modal-tips">Por definir</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <script>
+    const seccionesOriginales = document.querySelectorAll('.database-section');
+    const vistaFiltrada = document.getElementById('filtered-view');
+    const heroBanner = document.querySelector('.hero-banner');
+    const botonesMenu = document.querySelectorAll('.nav-btn');
+    const enlacesFaccion = document.querySelectorAll('.faction-bar a');
+
+    function cambiarVista(modo, event) {
+        if (event) event.preventDefault();
+
+        // Actualizar botón activo en el menú superior
+        botonesMenu.forEach(btn => btn.classList.remove('active'));
+        if (event && event.target.classList.contains('nav-btn')) {
+            event.target.classList.add('active');
+        }
+
+        if (modo === 'todos') {
+            // Muestra todo como al principio
+            heroBanner.style.display = 'block';
+            vistaFiltrada.style.display = 'none';
+            seccionesOriginales.forEach(sec => sec.style.display = 'block');
+        } 
+        else if (modo === 'facciones') {
+            // Muestra solo la primera facción por defecto y permite elegir en la barra
+            heroBanner.style.display = 'none';
+            vistaFiltrada.style.display = 'none';
+            mostrarSoloUnaFaccion('liebres');
+        } 
+        else if (modo === 'atributos') {
+            // Agrupa a todos los personajes por su atributo elemental
+            heroBanner.style.display = 'none';
+            seccionesOriginales.forEach(sec => sec.style.display = 'none');
+            vistaFiltrada.style.display = 'block';
+            generarVistaPorAtributos();
+        }
+    }
+
+    function mostrarSoloUnaFaccion(idFaccion) {
+        seccionesOriginales.forEach(sec => {
+            sec.style.display = (sec.id === idFaccion) ? 'block' : 'none';
+        });
+    }
+
+    function generarVistaPorAtributos() {
+        const atributos = [
+            { clase: 'attr-fire', nombre: 'Atributo: Ígneo' },
+            { clase: 'attr-ice', nombre: 'Atributo: Glacial / Escarcha' },
+            { clase: 'attr-electric', nombre: 'Atributo: Eléctrico' },
+            { clase: 'attr-ether', nombre: 'Atributo: Etéreo / Tinta Áurica' },
+            { clase: 'attr-physical', nombre: 'Atributo: Físico / Filo Afilado' },
+            { clase: 'attr-wind', nombre: 'Atributo: Aéreo' },
+            { clase: 'attr-lumi', nombre: 'Atributo: Lumiflujo' }
+        ];
+
+        vistaFiltrada.innerHTML = '';
+
+        atributos.forEach(attr => {
+            // Busca todas las tarjetas que tengan esa clase de atributo
+            const tarjetas = document.querySelectorAll(`.agent-card:has(.${attr.clase})`);
+            
+            if (tarjetas.length > 0) {
+                const seccion = document.createElement('section');
+                seccion.className = 'database-section';
+                seccion.innerHTML = `<h3 class="section-title">/ ${attr.nombre} (${tarjetas.length})</h3>`;
+                
+                const grid = document.createElement('div');
+                grid.className = 'agent-grid';
+
+                tarjetas.forEach(tarjeta => {
+                    // Clona cada tarjeta para no moverla de su facción original
+                    grid.appendChild(tarjeta.cloneNode(true));
+                });
+
+                seccion.appendChild(grid);
+                vistaFiltrada.appendChild(seccion);
+            }
+        });
+    }
+
+    // Hacer que la barra sticky de facciones filtre cuando estás en modo "Por Facción"
+    enlacesFaccion.forEach(enlace => {
+        enlace.addEventListener('click', (e) => {
+            const modoPorFaccionActivo = document.querySelector('.nav-btn:nth-child(2)').classList.contains('active');
+            
+            if (modoPorFaccionActivo) {
+                e.preventDefault();
+                const idDestino = enlace.getAttribute('href').replace('#', '');
+                mostrarSoloUnaFaccion(idDestino);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+
+// Base de datos de guías (ve agregando personajes usando exactamente su nombre del <h4>)
+    const guiasAgentes = {
+        "Nicole Demara": {
+            desc: "Especialista de apoyo Etéreo capaz de agrupar enemigos con campos gravitatorios y reducir drásticamente su defensa.",
+            core: "Pasiva Central: E / F (Máxima prioridad)",
+            skills: ["Técnica Especial", "Técnica Definitiva", "Ataque Básico", "Técnica de Apoyo", "Evasión"],
+            wengine: "Cuna Plañidera (Rango S) / Camara Acorazada",
+            discs: "4x Jazz Oscilante + 2x Metal Caotico",
+            tips: "Usa su Técnica Especial EX cargada antes de cambiar rápidamente a tu Atacante principal para aprovechar la reducción de defensa."
+        },
+        "Anby Demara": {
+            desc: "Aturdidora eléctrica ágil con alto impacto en sus ataques básicos y contraataques.",
+            core: "Pasiva Central: F (Prioridad #1)",
+            skills: ["Técnica Especial", "Ataque Básico", "Técnica Definitiva", "Evasión", "Técnica de Apoyo"],
+            wengine: "Batería Demara Tipo II",
+            discs: "4x Disco de Impacto (Shockstar Disco) + 2x Swing Jazz",
+            tips: "Ejecuta 3 ataques básicos seguidos de su Técnica Especial para maximizar el medidor de desequilibrio."
+        },
+        "Hoshimi Miyabi": {
+            desc: "Void Hunter de atributo Escarcha enfocada en daño explosivo mediante acumulación de anomalía y cortes cargados.",
+            core: "Pasiva Central: F (Prioridad #1)",
+            skills: ["Ataque Básico", "Técnica Definitiva", "Técnica Especial", "Evasión", "Técnica de Apoyo"],
+            wengine: "Santuario de Escarcha (Rango S)",
+            discs: "4x Balada de Rama y Espada + 2x Tecno picido",
+            tips: "Acumula cargas de Escarcha caída para liberar su ataque básico cargado de nivel 3.",
+        },
+        // Aquí puedes seguir agregando el resto de agentes...
+        "Billy Kid": {
+            desc: "Atacante fisico agil con prioridad de daño de ataques basicos y tecnica definitiva.",
+            core: "Pasiva Central: F (Prioridad #1)",
+            skills: ["Ataque basico", "Técnica Definitiva", "Tecnica especial", "Técnica de Apoyo", "Evasión"],
+            wengine: "Replica de motor estelar)",
+            discs: "4x Metal Colmilludo + 2x Tecno Picido",
+            tips: "Acumula cargas de Escarcha caída para liberar su ataque básico cargado de nivel 3."
+        },
+    };
+
+    const modal = document.getElementById('agent-modal');
+    const modalBox = document.getElementById('modal-box');
+
+    // Detectar clic en cualquier tarjeta (funciona tanto en vista normal como en vista filtrada)
+    document.addEventListener('click', (e) => {
+        const card = e.target.closest('.agent-card');
+        if (!card) return;
+
+        // Extraer datos directamente de la tarjeta presionada
+        const nombre = card.querySelector('h4').textContent.trim();
+        const faccion = card.querySelector('.faction').textContent.trim();
+        const bgImage = card.querySelector('.agent-portrait').style.backgroundImage;
+        const tagsHTML = card.querySelector('.tags').innerHTML;
+
+        // Obtener el color de iluminación calculado de esa tarjeta
+        const glowColor = getComputedStyle(card).getPropertyValue('--glow-color').trim();
+        modalBox.style.setProperty('--modal-accent', glowColor || '#00e5ff');
+
+        // Rellenar cabecera del modal
+        document.getElementById('modal-name').textContent = nombre;
+        document.getElementById('modal-faction').textContent = faccion;
+        document.getElementById('modal-img').style.backgroundImage = bgImage;
+        document.getElementById('modal-tags').innerHTML = tagsHTML;
+
+        // Buscar si ya tiene guía escrita o mostrar plantilla por defecto
+        const info = guiasAgentes[nombre] || {
+            desc: "Expediente táctico en proceso de recopilación en la red Inter-Knot.",
+            core: "Pasiva Central: Pendiente",
+            skills: ["Pendiente de análisis"],
+            wengine: "Pendiente de análisis",
+            discs: "Pendiente de análisis",
+            tips: "Agrega los datos de este agente en el objeto 'guiasAgentes' dentro del script.",
+        };
+
+        document.getElementById('modal-desc').textContent = info.desc;
+        document.getElementById('modal-core').textContent = info.core || "Pasiva Central: F";
+        document.getElementById('modal-wengine').textContent = info.wengine;
+        document.getElementById('modal-discs').textContent = info.discs;
+        document.getElementById('modal-tips').textContent = info.tips;
+
+        // Renderizar las habilidades separadas por flechas (>)
+        const skillsContainer = document.getElementById('modal-skills');
+        if (info.skills && info.skills.length > 0) {
+            skillsContainer.innerHTML = info.skills
+                .map(hab => `<span class="skill-step">${hab}</span>`)
+                .join('<span class="skill-arrow">&gt;</span>');
+        } else {
+            skillsContainer.innerHTML = '<span class="skill-step">Pendiente de análisis</span>';
+        }
+
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden'; // Evita scroll detrás del modal
+    });
+
+    function cerrarModal(event, forzar = false) {
+        if (forzar || event.target === modal) {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Cerrar también con la tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+    });
+
+</script>
+
+</body>
+</html>
